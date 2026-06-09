@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>yummy 管理台 | 本地需求仓库</title>
+    <meta name="description" content="yummy PPT 工作室本地管理台，用于导入客户 ZIP 需求包并在浏览器本地建立项目索引。">
+    <link rel="stylesheet" href="styles.css?v=20260609-yummy">
+    <link rel="stylesheet" href="admin.css?v=20260609-yummy">
+  </head>
+  <body class="admin-body">
+    <header class="site-header" aria-label="管理台导航">
+      <a class="brand" href="index.html" aria-label="返回 yummy 首页">
+        <span class="brand-mark">y</span>
+        <span>yummy</span>
+      </a>
+      <nav class="nav-links" aria-label="管理台导航">
+        <a href="index.html#brief">客户页面</a>
+        <a href="mailto:2455407376@qq.com">邮箱</a>
+      </nav>
+      <a class="nav-cta" href="index.html">返回首页</a>
+    </header>
+
+    <main class="admin-main">
+      <section class="admin-hero" data-animate>
+        <p class="eyebrow">Local Vault</p>
+        <h1>yummy 管理者本地仓库</h1>
+        <p>导入客户发来的 ZIP 需求包，查看需求摘要、参考文件清单，并保留原始 ZIP。数据只保存在当前浏览器本地。</p>
+      </section>
+
+      <section class="admin-panel" id="authPanel" data-animate>
+        <h2 id="authTitle">设置管理密码</h2>
+        <p class="admin-note" id="authNote">首次使用请设置一个本机管理密码。它只保护当前浏览器里的本地索引，不会上传到网站服务器。</p>
+        <form class="auth-form" id="authForm">
+          <label>
+            密码
+            <input id="adminPassword" type="password" autocomplete="current-password">
+          </label>
+          <label id="confirmLabel">
+            确认密码
+            <input id="adminPasswordConfirm" type="password" autocomplete="new-password">
+          </label>
+          <button class="button primary" type="submit" id="authButton">进入管理台</button>
+          <button class="button ghost" type="button" id="resetPassword">重置本机密码</button>
+        </form>
+        <output class="admin-message" id="authMessage" aria-live="polite"></output>
+      </section>
+
+      <section class="admin-workspace" id="workspace" hidden>
+        <div class="admin-panel import-panel" data-animate>
+          <div>
+            <p class="eyebrow">Import</p>
+            <h2>导入客户 ZIP</h2>
+            <p class="admin-note">选择客户通过邮件发来的需求包。管理台会读取 `yummy-ppt-brief.json`，并把原始 ZIP 保存到本地仓库。</p>
+          </div>
+          <label class="file-drop">
+            <input id="zipInput" type="file" accept=".zip,application/zip">
+            <span>选择 ZIP 需求包</span>
+          </label>
+          <button class="button primary" type="button" id="importZip">导入仓库</button>
+          <output class="admin-message" id="importMessage" aria-live="polite"></output>
+        </div>
+
+        <div class="vault-layout">
+          <section class="admin-panel">
+            <div class="panel-heading">
+              <div>
+                <p class="eyebrow">Requests</p>
+                <h2>项目列表</h2>
+              </div>
+              <button class="button secondary" type="button" id="exportIndex">导出索引</button>
+            </div>
+            <div class="request-list" id="requestList"></div>
+          </section>
+
+          <section class="admin-panel detail-panel">
+            <p class="eyebrow">Detail</p>
+            <div id="requestDetail" class="request-detail empty">选择一个项目查看详情。</div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="assets/jszip.min.js?v=3.10.1"></script>
+    <script src="admin.js?v=20260609-yummy"></script>
+  </body>
+</html>
