@@ -69,8 +69,7 @@ textarea {
 .hero-actions,
 .hero-metrics,
 .footer,
-.form-actions,
-.manager-actions {
+.form-actions {
   display: flex;
   align-items: center;
 }
@@ -229,7 +228,6 @@ h3 {
 .section-heading p,
 .section-note,
 .brief-copy p,
-.manager-section p,
 .style-copy p {
   color: var(--muted);
   line-height: 1.78;
@@ -333,9 +331,7 @@ h3 {
 .timeline-item,
 .brief-form,
 .contact-card,
-.style-copy,
-.manager-actions,
-.admin-panel {
+.style-copy {
   border: 1px solid var(--line);
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.78);
@@ -453,8 +449,7 @@ h3 {
   font-weight: 850;
 }
 
-.package-section,
-.manager-section {
+.package-section {
   display: grid;
   grid-template-columns: 0.75fr 1.15fr;
   gap: 44px;
@@ -478,8 +473,7 @@ h3 {
 
 .brief-form input,
 .brief-form select,
-.brief-form textarea,
-.admin-panel input {
+.brief-form textarea {
   width: 100%;
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -491,8 +485,7 @@ h3 {
 
 .brief-form input:focus,
 .brief-form select:focus,
-.brief-form textarea:focus,
-.admin-panel input:focus {
+.brief-form textarea:focus {
   border-color: var(--sage);
   box-shadow: 0 0 0 3px rgba(154, 169, 143, 0.16);
 }
@@ -528,18 +521,6 @@ h3 {
   margin-top: 22px;
   padding: 18px;
   color: #58634f;
-}
-
-.manager-section {
-  grid-template-columns: 1fr 0.65fr;
-  border-top: 1px solid var(--line);
-}
-
-.manager-actions {
-  gap: 12px;
-  justify-content: flex-start;
-  align-self: center;
-  padding: 24px;
 }
 
 .footer {
@@ -640,8 +621,7 @@ h3 {
   .timeline,
   .case-grid,
   .aesthetic-grid,
-  .package-section,
-  .manager-section {
+  .package-section {
     grid-template-columns: 1fr;
   }
 
@@ -660,7 +640,6 @@ h3 {
   }
 
   .hero-actions,
-  .manager-actions,
   .form-actions {
     align-items: stretch;
     flex-direction: column;
