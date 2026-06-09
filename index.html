@@ -1,11 +1,11 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="zh-CN">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>yummy | PPT 定制与美化工作室</title>
-    <meta name="description" content="yummy 专注 PPT 定制、美化、改稿和商业演示设计，用小清新莫兰迪视觉与清晰结构，让演示更有艺术感和说服力。">
-    <link rel="stylesheet" href="styles.css?v=20260609-yummy">
+    <meta name="description" content="yummy 专注 PPT 定制、美化、改稿和商业演示设计，根据行业、品牌、受众和场景定制不同风格，让演示更清晰、更好看、更有说服力。">
+    <link rel="stylesheet" href="styles.css?v=20260609-yummy2">
   </head>
   <body>
     <header class="site-header" aria-label="主导航">
@@ -15,7 +15,7 @@
       </a>
       <nav class="nav-links" aria-label="页面导航">
         <a href="#services">服务</a>
-        <a href="#aesthetic">风格</a>
+        <a href="#aesthetic">能力</a>
         <a href="#process">流程</a>
         <a href="#brief">需求打包</a>
       </nav>
@@ -24,13 +24,13 @@
 
     <main id="top">
       <section class="hero" aria-labelledby="hero-title">
-        <img class="hero-image" src="assets/hero-yummy-morandi.png" alt="莫兰迪色系的 PPT 设计工作台">
+        <img class="hero-image" src="assets/hero-yummy-studio.png" alt="明亮清爽的 PPT 设计工作台">
         <div class="hero-shade"></div>
         <div class="hero-content" data-animate>
           <p class="eyebrow">PPT Design Studio</p>
           <h1 id="hero-title">把普通 PPT，做成有品味的表达</h1>
           <p class="hero-copy">
-            yummy 提供 PPT 定制、美化、改稿与视觉升级。我们把零散素材梳理成清晰叙事，再用小清新莫兰迪视觉、艺术化留白和可编辑版式，让每一页都更耐看、更好讲。
+            yummy 提供 PPT 定制、美化、改稿与视觉升级。我们把零散素材梳理成清晰叙事，再根据行业、品牌、受众和使用场景选择合适风格，让每一页都更耐看、更好讲。
           </p>
           <div class="hero-actions">
             <a class="button primary" href="#brief">打包需求</a>
@@ -99,8 +99,8 @@
 
       <section class="section aesthetic-section" id="aesthetic" aria-labelledby="aesthetic-title">
         <div class="section-heading compact" data-animate>
-          <p class="eyebrow">Aesthetic</p>
-          <h2 id="aesthetic-title">小清新、莫兰迪、带一点艺术感</h2>
+          <p class="eyebrow">Style Range</p>
+          <h2 id="aesthetic-title">风格跟着内容走，不套固定模板</h2>
         </div>
         <div class="aesthetic-grid">
           <div class="palette-panel" data-animate>
@@ -111,16 +111,16 @@
             <span style="--swatch:#9aa98f"></span>
           </div>
           <div class="style-copy" data-animate>
-            <h3>不堆装饰，只做有呼吸感的页面</h3>
-            <p>以低饱和色、柔和光感、纸感肌理和精确留白建立质感；用艺术画册式排版处理封面、目录、图文页和结论页，让 PPT 清爽但不单薄。</p>
+            <h3>网站偏清爽，但作品不止一种风格</h3>
+            <p>这套官网用低饱和色和柔和留白呈现 yummy 的工作室气质；真正交付的 PPT 会按你的项目目标来定制，可以是专业商务、科技清爽、教育亲和、品牌发布、国风雅致或更有视觉冲击的路演风格。</p>
           </div>
           <div class="style-tags" data-animate>
-            <span>低饱和配色</span>
-            <span>艺术留白</span>
-            <span>温柔光感</span>
-            <span>可编辑版式</span>
-            <span>图表精修</span>
-            <span>品牌一致性</span>
+            <span>专业商务</span>
+            <span>科技清爽</span>
+            <span>教育亲和</span>
+            <span>品牌发布</span>
+            <span>国风雅致</span>
+            <span>高端路演</span>
           </div>
         </div>
       </section>
@@ -217,11 +217,16 @@
           <label>
             目标风格
             <select id="styleTone" name="styleTone">
-              <option>小清新莫兰迪</option>
-              <option>艺术画册感</option>
+              <option>按品牌/场景定制</option>
               <option>专业简洁</option>
+              <option>高端路演</option>
               <option>高端商务</option>
               <option>科技清爽</option>
+              <option>教育亲和</option>
+              <option>活泼潮流</option>
+              <option>国风雅致</option>
+              <option>艺术画册感</option>
+              <option>清新柔和</option>
             </select>
           </label>
           <label>
@@ -238,7 +243,7 @@
           </label>
           <label class="full-row">
             重点需求
-            <textarea id="needDetail" name="needDetail" rows="5" placeholder="例如：已有 20 页工作汇报，希望整体美化，保留内容但增强图表表达，风格偏莫兰迪小清新。"></textarea>
+            <textarea id="needDetail" name="needDetail" rows="5" placeholder="例如：已有 20 页工作汇报，希望整体美化，保留内容但增强图表表达，风格偏专业商务或根据品牌调性定制。"></textarea>
           </label>
           <div class="form-actions full-row">
             <button class="button primary" type="button" id="buildPackage">生成 ZIP 需求包</button>
@@ -256,6 +261,6 @@
     </footer>
 
     <script src="assets/jszip.min.js?v=3.10.1"></script>
-    <script src="script.js?v=20260609-yummy"></script>
+    <script src="script.js?v=20260609-yummy2"></script>
   </body>
 </html>
